@@ -97,8 +97,8 @@ export const about: {
     { value: "4", label: { en: "companies", es: "empresas" } },
     { value: "AWS", label: { en: "Cloud Practitioner", es: "Cloud Practitioner" } },
     {
-      value: "8.97",
-      label: { en: "GPA — Systems Eng.", es: "Promedio — Ing. Sistemas" },
+      value: "9.09",
+      label: { en: "Academic Average", es: "Promedio académico" },
     },
   ],
 };
@@ -315,12 +315,12 @@ export const education = {
   period: { en: "2022 — 2025", es: "2022 — 2025" },
   highlights: {
     en: [
-      "GPA 8.97 / 10 — degree completed one year ahead of the official 5-year plan.",
+      "Academic average 9.09 / 10 — degree completed one year ahead of the official 5-year plan.",
       "Final project: SaveApp — mobile app for managing bank-card benefits.",
       "Studied alongside professional work, applying coursework to real projects.",
     ],
     es: [
-      "Promedio 8.97 / 10 — carrera terminada un año antes del plan oficial de 5 años.",
+      "Promedio 9.09 / 10 — carrera terminada un año antes del plan oficial de 5 años.",
       "Proyecto final: SaveApp — app móvil para gestión de beneficios bancarios.",
       "Cursé en paralelo a trabajos profesionales, aplicando los contenidos en proyectos reales.",
     ],
