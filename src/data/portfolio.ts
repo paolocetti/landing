@@ -46,10 +46,8 @@ export interface ProjectEntry {
   stack: string[];
   repoUrl?: string;
   demoUrl?: string;
-  /** External link the card's ↗ arrow points to (e.g. a publication). */
-  link?: string;
   /** Labeled external links rendered as chips at the foot of the card. */
-  links?: { label: string; url: string }[];
+  links?: { label: string | Bilingual<string>; url: string }[];
   associated?: Bilingual<string>;
   /** Plain string for year-only ranges; bilingual when it carries a word like "Present". */
   period: string | Bilingual<string>;
@@ -253,7 +251,6 @@ export const projects: ProjectEntry[] = [
       en: "Helped several friends launch and run their businesses online, taking full ownership of the technical setup: domain and DNS, custom email, static landing pages, lightweight databases with Google Sheets as backend, and automations for content and lead management.",
       es: "Ayudé a varios amigos a arrancar y mantener sus negocios online, haciéndome cargo del setup técnico completo: dominio y DNS, mail con dominio propio, landing pages, bases de datos livianas usando Google Sheets como backend, y automatizaciones para gestión de contenido y leads.",
     },
-    link: "https://ffmotors.com.ar",
     links: [
       { label: "FF Motors", url: "https://ffmotors.com.ar" },
       { label: "V1NITO", url: "https://unv1nito.com.ar" },
@@ -278,7 +275,10 @@ export const projects: ProjectEntry[] = [
       en: "Final degree project (UCC), built as a team. I designed and implemented the backend: data modeling, REST APIs for promotion lookup and filtering, business validations and modular architecture prioritizing scalability and maintainability.",
       es: "Proyecto final de carrera (UCC), desarrollado en equipo. Diseñé e implementé el backend: modelado de datos, APIs REST para búsqueda y filtrado de promociones, validaciones de negocio y arquitectura modular priorizando escalabilidad y mantenibilidad.",
     },
-    link: "https://saveapp.com.ar/",
+    links: [
+      { label: "Landing", url: "https://saveapp.com.ar/" },
+      { label: "GitHub Org", url: "https://github.com/SaveApp-Org" },
+    ],
     stack: ["Python", "REST API", "MySQL", "Mobile"],
   },
   {
@@ -294,8 +294,12 @@ export const projects: ProjectEntry[] = [
       en: "Automated Python scraper for public court data across LATAM. EC2 for scheduled processing, Lambda for on-demand, EventBridge for orchestration, MySQL for persistence. CI/CD on GitHub Actions.",
       es: "Scraper automatizado en Python para datos judiciales públicos de LATAM. EC2 para ejecuciones programadas, Lambda on-demand, EventBridge para orquestación, MySQL para persistencia. CI/CD con GitHub Actions.",
     },
-    repoUrl: "https://github.com/cettipao/Qanlex-Scrapper",
-    link: "https://github.com/cettipao/Qanlex-Scrapper",
+    links: [
+      {
+        label: { en: "Repository", es: "Repositorio" },
+        url: "https://github.com/cettipao/Qanlex-Scrapper",
+      },
+    ],
     stack: ["Python", "AWS Lambda", "EventBridge", "EC2", "MySQL"],
   },
   {
@@ -314,7 +318,15 @@ export const projects: ProjectEntry[] = [
       en: "Research paper published at XI IDETEC 2024 (UTN Villa María, ISBN 978-987-8992-45-7). We trained a 9-layer Deep Neural Network on keystroke dynamics — pressed key, hold time, flight time — to authenticate users by their unique typing patterns, without storing the actual password.",
       es: "Paper de investigación publicado en XI IDETEC 2024 (UTN Villa María, ISBN 978-987-8992-45-7). Entrenamos una red neuronal profunda de 9 capas sobre keystroke dynamics — tecla presionada, hold time y flight time — para autenticar usuarios por su patrón único de tipeo, sin necesidad de almacenar la contraseña real.",
     },
-    link: "https://idetec.frvm.utn.edu.ar/api/pub/g/tf/11/8",
+    links: [
+      {
+        label: {
+          en: "Research paper (ISBN 978-987-8992-45-7)",
+          es: "Paper de investigación (ISBN 978-987-8992-45-7)",
+        },
+        url: "https://idetec.frvm.utn.edu.ar/api/pub/g/tf/11/8",
+      },
+    ],
     stack: ["Python", "Deep Learning", "TensorFlow", "ZKP", "Research"],
   },
   {
@@ -333,7 +345,12 @@ export const projects: ProjectEntry[] = [
       en: "Retrieval-Augmented Generation pipeline combining semantic retrieval with LLM generation. Service-oriented architecture lets retrieval, embeddings and generation scale independently.",
       es: "Pipeline de Retrieval-Augmented Generation que combina búsqueda semántica con generación vía LLMs. Arquitectura orientada a servicios donde retrieval, embeddings y generación escalan de forma independiente.",
     },
-    link: "https://dev.azure.com/cettipao/getTalent-final",
+    links: [
+      {
+        label: { en: "Repository", es: "Repositorio" },
+        url: "https://dev.azure.com/cettipao/getTalent-final",
+      },
+    ],
     stack: ["Python", "Azure", "LLMs", "RAG", "NLP"],
   },
 ];

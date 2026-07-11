@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/BrandIcons";
 import type { ProjectEntry } from "@/data/portfolio";
 import type { Locale } from "@i18n/ui";
@@ -11,7 +11,6 @@ interface Props {
   labels: {
     repo: string;
     demo: string;
-    link: string;
   };
 }
 
@@ -66,38 +65,19 @@ export default function ProjectCard({ project, locale, labels }: Props) {
       transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
       className="group relative rounded-xl border border-border bg-bg-tertiary/40 p-6 md:p-8 transition-colors hover:border-accent/40 hover:shadow-[0_0_50px_-10px_var(--color-accent-glow)]"
     >
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className="font-mono text-xs text-text-tertiary">
-            {period}
-            {project.associated && (
-              <>
-                {" · "}
-                {project.associated[locale]}
-              </>
-            )}
-          </p>
-          <h3 className="mt-2 text-xl md:text-2xl font-semibold tracking-tight">
-            {title}
-          </h3>
-        </div>
-        {project.link ? (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${labels.link}: ${title}`}
-            className="shrink-0 text-text-tertiary group-hover:text-accent transition-colors"
-          >
-            <ArrowUpRight size={20} aria-hidden="true" />
-          </a>
-        ) : (
-          <ArrowUpRight
-            size={20}
-            aria-hidden="true"
-            className="text-text-tertiary group-hover:text-accent transition-colors shrink-0"
-          />
-        )}
+      <div>
+        <p className="font-mono text-xs text-text-tertiary">
+          {period}
+          {project.associated && (
+            <>
+              {" · "}
+              {project.associated[locale]}
+            </>
+          )}
+        </p>
+        <h3 className="mt-2 text-xl md:text-2xl font-semibold tracking-tight">
+          {title}
+        </h3>
       </div>
 
       <p className="mt-3 text-text-secondary leading-relaxed">
@@ -128,7 +108,7 @@ export default function ProjectCard({ project, locale, labels }: Props) {
             className="inline-flex items-center gap-1.5 rounded border border-border px-2.5 py-1 text-xs text-text-secondary hover:border-accent/40 hover:text-accent transition-colors"
           >
             <ExternalLink size={12} aria-hidden="true" />
-            {link.label}
+            {typeof link.label === "string" ? link.label : link.label[locale]}
           </a>
         ))}
         {project.repoUrl && (
