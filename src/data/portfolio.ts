@@ -28,9 +28,19 @@ export interface ExperienceEntry {
   stack: string[];
 }
 
+export type ProjectType =
+  | "professional"
+  | "academic"
+  | "research"
+  | "personal"
+  | "client-work";
+
 export interface ProjectEntry {
   slug: string;
-  title: string;
+  /** Plain string when language-neutral (brand/technical names); bilingual when it needs translating. */
+  title: string | Bilingual<string>;
+  /** Coarse category to tell cards apart (not rendered yet). */
+  type?: ProjectType;
   summary: Bilingual<string>;
   description: Bilingual<string>;
   stack: string[];
@@ -38,8 +48,11 @@ export interface ProjectEntry {
   demoUrl?: string;
   /** External link the card's ↗ arrow points to (e.g. a publication). */
   link?: string;
+  /** Labeled external links rendered as chips at the foot of the card. */
+  links?: { label: string; url: string }[];
   associated?: Bilingual<string>;
-  period: string;
+  /** Plain string for year-only ranges; bilingual when it carries a word like "Present". */
+  period: string | Bilingual<string>;
 }
 
 export interface StackCategory {
@@ -218,6 +231,38 @@ export const experience: ExperienceEntry[] = [
 
 export const projects: ProjectEntry[] = [
   {
+    slug: "client-websites-automations",
+    title: {
+      en: "Client Websites & Automations",
+      es: "Sitios web y automatizaciones para clientes",
+    },
+    type: "client-work",
+    period: {
+      en: "2026 — Present",
+      es: "2026 — Actualidad",
+    },
+    associated: {
+      en: "Client Work · Independent",
+      es: "Trabajos para clientes · Independiente",
+    },
+    summary: {
+      en: "End-to-end web presence for small businesses — from domain to deployment, data and automations.",
+      es: "Presencia web end-to-end para emprendimientos — desde el dominio hasta el deploy, datos y automatizaciones.",
+    },
+    description: {
+      en: "Helped several friends launch and run their businesses online, taking full ownership of the technical setup: domain and DNS, custom email, static landing pages, lightweight databases with Google Sheets as backend, and automations for content and lead management.",
+      es: "Ayudé a varios amigos a arrancar y mantener sus negocios online, haciéndome cargo del setup técnico completo: dominio y DNS, mail con dominio propio, landing pages, bases de datos livianas usando Google Sheets como backend, y automatizaciones para gestión de contenido y leads.",
+    },
+    link: "https://ffmotors.com.ar",
+    links: [
+      { label: "FF Motors", url: "https://ffmotors.com.ar" },
+      { label: "V1NITO", url: "https://unv1nito.com.ar" },
+      { label: "Nubiq Domótica", url: "https://nubiqdomotica.com.ar" },
+      { label: "Luz Mulinaris", url: "https://luzmulinaris.github.io/portfolio/en" },
+    ],
+    stack: ["Web", "DNS", "Google Sheets", "Automations", "Client Work"],
+  },
+  {
     slug: "saveapp",
     title: "SaveApp",
     period: "2025",
@@ -237,23 +282,21 @@ export const projects: ProjectEntry[] = [
     stack: ["Python", "REST API", "MySQL", "Mobile"],
   },
   {
-    slug: "ragpi",
-    title: "RAGPi",
-    period: "2024",
-    associated: {
-      en: "Pi Data Strategy & Consulting",
-      es: "Pi Data Strategy & Consulting",
-    },
+    slug: "qanlex-scraper",
+    title: "Qanlex Web Scraper",
+    period: "2025",
+    associated: { en: "Qanlex", es: "Qanlex" },
     summary: {
-      en: "Modular RAG system for queries over structured and unstructured data on Azure.",
-      es: "Sistema RAG modular para consultas sobre datos estructurados y no estructurados en Azure.",
+      en: "Serverless multi-country court-data scraper deployed on AWS.",
+      es: "Scraper serverless multi-país de datos judiciales desplegado en AWS.",
     },
     description: {
-      en: "Retrieval-Augmented Generation pipeline combining semantic retrieval with LLM generation. Service-oriented architecture lets retrieval, embeddings and generation scale independently.",
-      es: "Pipeline de Retrieval-Augmented Generation que combina búsqueda semántica con generación vía LLMs. Arquitectura orientada a servicios donde retrieval, embeddings y generación escalan de forma independiente.",
+      en: "Automated Python scraper for public court data across LATAM. EC2 for scheduled processing, Lambda for on-demand, EventBridge for orchestration, MySQL for persistence. CI/CD on GitHub Actions.",
+      es: "Scraper automatizado en Python para datos judiciales públicos de LATAM. EC2 para ejecuciones programadas, Lambda on-demand, EventBridge para orquestación, MySQL para persistencia. CI/CD con GitHub Actions.",
     },
-    link: "https://dev.azure.com/cettipao/getTalent-final",
-    stack: ["Python", "Azure", "LLMs", "RAG", "NLP"],
+    repoUrl: "https://github.com/cettipao/Qanlex-Scrapper",
+    link: "https://github.com/cettipao/Qanlex-Scrapper",
+    stack: ["Python", "AWS Lambda", "EventBridge", "EC2", "MySQL"],
   },
   {
     slug: "zkp-ai-authentication",
@@ -275,21 +318,23 @@ export const projects: ProjectEntry[] = [
     stack: ["Python", "Deep Learning", "TensorFlow", "ZKP", "Research"],
   },
   {
-    slug: "qanlex-scraper",
-    title: "Qanlex Web Scraper",
-    period: "2025",
-    associated: { en: "Qanlex", es: "Qanlex" },
+    slug: "ragpi",
+    title: "RAGPi",
+    period: "2024",
+    associated: {
+      en: "Pi Data Strategy & Consulting",
+      es: "Pi Data Strategy & Consulting",
+    },
     summary: {
-      en: "Serverless multi-country court-data scraper deployed on AWS.",
-      es: "Scraper serverless multi-país de datos judiciales desplegado en AWS.",
+      en: "Modular RAG system for queries over structured and unstructured data on Azure.",
+      es: "Sistema RAG modular para consultas sobre datos estructurados y no estructurados en Azure.",
     },
     description: {
-      en: "Automated Python scraper for public court data across LATAM. EC2 for scheduled processing, Lambda for on-demand, EventBridge for orchestration, MySQL for persistence. CI/CD on GitHub Actions.",
-      es: "Scraper automatizado en Python para datos judiciales públicos de LATAM. EC2 para ejecuciones programadas, Lambda on-demand, EventBridge para orquestación, MySQL para persistencia. CI/CD con GitHub Actions.",
+      en: "Retrieval-Augmented Generation pipeline combining semantic retrieval with LLM generation. Service-oriented architecture lets retrieval, embeddings and generation scale independently.",
+      es: "Pipeline de Retrieval-Augmented Generation que combina búsqueda semántica con generación vía LLMs. Arquitectura orientada a servicios donde retrieval, embeddings y generación escalan de forma independiente.",
     },
-    repoUrl: "https://github.com/cettipao/Qanlex-Scrapper",
-    link: "https://github.com/cettipao/Qanlex-Scrapper",
-    stack: ["Python", "AWS Lambda", "EventBridge", "EC2", "MySQL"],
+    link: "https://dev.azure.com/cettipao/getTalent-final",
+    stack: ["Python", "Azure", "LLMs", "RAG", "NLP"],
   },
 ];
 

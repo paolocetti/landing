@@ -45,6 +45,11 @@ export default function ProjectCard({ project, locale, labels }: Props) {
     ry.set(0);
   };
 
+  const title =
+    typeof project.title === "string" ? project.title : project.title[locale];
+  const period =
+    typeof project.period === "string" ? project.period : project.period[locale];
+
   return (
     <motion.article
       ref={cardRef}
@@ -64,7 +69,7 @@ export default function ProjectCard({ project, locale, labels }: Props) {
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="font-mono text-xs text-text-tertiary">
-            {project.period}
+            {period}
             {project.associated && (
               <>
                 {" · "}
@@ -73,7 +78,7 @@ export default function ProjectCard({ project, locale, labels }: Props) {
             )}
           </p>
           <h3 className="mt-2 text-xl md:text-2xl font-semibold tracking-tight">
-            {project.title}
+            {title}
           </h3>
         </div>
         {project.link ? (
@@ -81,7 +86,7 @@ export default function ProjectCard({ project, locale, labels }: Props) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`${labels.link}: ${project.title}`}
+            aria-label={`${labels.link}: ${title}`}
             className="shrink-0 text-text-tertiary group-hover:text-accent transition-colors"
           >
             <ArrowUpRight size={20} aria-hidden="true" />
@@ -114,6 +119,18 @@ export default function ProjectCard({ project, locale, labels }: Props) {
       </ul>
 
       <div className="mt-6 flex flex-wrap gap-3">
+        {project.links?.map((link) => (
+          <a
+            key={link.url}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded border border-border px-2.5 py-1 text-xs text-text-secondary hover:border-accent/40 hover:text-accent transition-colors"
+          >
+            <ExternalLink size={12} aria-hidden="true" />
+            {link.label}
+          </a>
+        ))}
         {project.repoUrl && (
           <a
             href={project.repoUrl}
