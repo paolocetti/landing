@@ -11,6 +11,7 @@ interface Props {
   labels: {
     repo: string;
     demo: string;
+    link: string;
   };
 }
 
@@ -75,11 +76,23 @@ export default function ProjectCard({ project, locale, labels }: Props) {
             {project.title}
           </h3>
         </div>
-        <ArrowUpRight
-          size={20}
-          aria-hidden="true"
-          className="text-text-tertiary group-hover:text-accent transition-colors shrink-0"
-        />
+        {project.link ? (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${labels.link}: ${project.title}`}
+            className="shrink-0 text-text-tertiary group-hover:text-accent transition-colors"
+          >
+            <ArrowUpRight size={20} aria-hidden="true" />
+          </a>
+        ) : (
+          <ArrowUpRight
+            size={20}
+            aria-hidden="true"
+            className="text-text-tertiary group-hover:text-accent transition-colors shrink-0"
+          />
+        )}
       </div>
 
       <p className="mt-3 text-text-secondary leading-relaxed">

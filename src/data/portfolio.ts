@@ -36,6 +36,8 @@ export interface ProjectEntry {
   stack: string[];
   repoUrl?: string;
   demoUrl?: string;
+  /** External link the card's ↗ arrow points to (e.g. a publication). */
+  link?: string;
   associated?: Bilingual<string>;
   period: string;
 }
@@ -231,6 +233,7 @@ export const projects: ProjectEntry[] = [
       en: "Final degree project (UCC), built as a team. I designed and implemented the backend: data modeling, REST APIs for promotion lookup and filtering, business validations and modular architecture prioritizing scalability and maintainability.",
       es: "Proyecto final de carrera (UCC), desarrollado en equipo. Diseñé e implementé el backend: modelado de datos, APIs REST para búsqueda y filtrado de promociones, validaciones de negocio y arquitectura modular priorizando escalabilidad y mantenibilidad.",
     },
+    link: "https://saveapp.com.ar/",
     stack: ["Python", "REST API", "MySQL", "Mobile"],
   },
   {
@@ -249,7 +252,27 @@ export const projects: ProjectEntry[] = [
       en: "Retrieval-Augmented Generation pipeline combining semantic retrieval with LLM generation. Service-oriented architecture lets retrieval, embeddings and generation scale independently.",
       es: "Pipeline de Retrieval-Augmented Generation que combina búsqueda semántica con generación vía LLMs. Arquitectura orientada a servicios donde retrieval, embeddings y generación escalan de forma independiente.",
     },
+    link: "https://dev.azure.com/cettipao/getTalent-final",
     stack: ["Python", "Azure", "LLMs", "RAG", "NLP"],
+  },
+  {
+    slug: "zkp-ai-authentication",
+    title: "ZKP + AI Authentication",
+    period: "2024",
+    associated: {
+      en: "Research paper · UCC",
+      es: "Paper de investigación · UCC",
+    },
+    summary: {
+      en: "Zero Knowledge Proofs applied to biometric authentication via keystroke dynamics.",
+      es: "Zero Knowledge Proofs aplicadas a autenticación biométrica por dinámica de tipeo.",
+    },
+    description: {
+      en: "Research paper published at XI IDETEC 2024 (UTN Villa María, ISBN 978-987-8992-45-7). We trained a 9-layer Deep Neural Network on keystroke dynamics — pressed key, hold time, flight time — to authenticate users by their unique typing patterns, without storing the actual password.",
+      es: "Paper de investigación publicado en XI IDETEC 2024 (UTN Villa María, ISBN 978-987-8992-45-7). Entrenamos una red neuronal profunda de 9 capas sobre keystroke dynamics — tecla presionada, hold time y flight time — para autenticar usuarios por su patrón único de tipeo, sin necesidad de almacenar la contraseña real.",
+    },
+    link: "https://idetec.frvm.utn.edu.ar/api/pub/g/tf/11/8",
+    stack: ["Python", "Deep Learning", "TensorFlow", "ZKP", "Research"],
   },
   {
     slug: "qanlex-scraper",
@@ -265,6 +288,7 @@ export const projects: ProjectEntry[] = [
       es: "Scraper automatizado en Python para datos judiciales públicos de LATAM. EC2 para ejecuciones programadas, Lambda on-demand, EventBridge para orquestación, MySQL para persistencia. CI/CD con GitHub Actions.",
     },
     repoUrl: "https://github.com/cettipao/Qanlex-Scrapper",
+    link: "https://github.com/cettipao/Qanlex-Scrapper",
     stack: ["Python", "AWS Lambda", "EventBridge", "EC2", "MySQL"],
   },
 ];

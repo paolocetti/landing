@@ -47,6 +47,7 @@
     "viewRepo": "Repositorio",
     "viewDemo": "Demo",
     "viewCaseStudy": "Caso de estudio",
+    "viewLink": "Abrir enlace del proyecto",
     "githubHeading": "Más en GitHub",
     "githubDescription": "Repos públicos con más estrellas y actividad de contribuciones del último año, traídos desde la API de GitHub en tiempo de build.",
     "contributionsTotal": "Contribuciones en el último año",
