@@ -8,7 +8,7 @@
 
 ## 1. Visión general
 
-Portfolio personal de **Paolo Cetti**, Backend & Cloud Engineer.
+Portfolio personal de **Paolo Cetti**, Head of Engineering en Leanmote.
 
 **Objetivos:**
 1. Funcionar como vidriera profesional para recruiters y empresas tech.
@@ -390,16 +390,16 @@ Workflow que:
 
 ### Personal
 - **Nombre completo:** Paolo Cetti
-- **Título profesional (EN):** Backend & Cloud Engineer
-- **Título profesional (ES):** Backend & Cloud Engineer
+- **Título profesional (EN):** Head of Engineering @ Leanmote
+- **Título profesional (ES):** Head of Engineering @ Leanmote *(se deja en inglés en ambos idiomas)*
 - **Email:** cettipao@gmail.com
 - **LinkedIn:** linkedin.com/in/cettipao
 - **GitHub:** github.com/cettipao
 - **Ubicación:** Córdoba, Argentina
 
 ### Tagline (hero)
-- **EN:** "Building scalable backends and serverless architectures on AWS."
-- **ES:** "Construyo backends escalables y arquitecturas serverless en AWS."
+- **EN:** "Leading Leanmote's engineering team. Backend, cloud (AWS) and technical direction."
+- **ES:** "Liderando el equipo de ingeniería de Leanmote. Backend, cloud (AWS) y dirección técnica."
 
 ### About
 - Reutilizar el "Acerca de" del documento `perfil-linkedin-paolo-cetti.md` (versión EN y versión ES), adaptándolo levemente para tono más conversacional de portfolio.

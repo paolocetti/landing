@@ -85,90 +85,172 @@ export default function Timeline({ entries, locale, currentLabel }: Props) {
                   )}
                 </div>
 
-                <h3 className="text-xl font-semibold flex items-center gap-2 flex-wrap">
-                  <Briefcase
-                    size={16}
-                    aria-hidden="true"
-                    className="text-accent shrink-0"
-                  />
-                  <span>{entry.role[locale]}</span>
-                </h3>
-                <p
-                  className={
-                    "mt-1 text-sm flex items-center gap-2 flex-wrap " +
-                    (isLeft ? "md:justify-end" : "md:justify-start")
-                  }
-                >
-                  {entry.url ? (
-                    <a
-                      href={entry.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-text-primary hover:text-accent transition-colors inline-flex items-center gap-1"
+                {entry.roles ? (
+                  <>
+                    <h3
+                      className={
+                        "text-xl font-semibold flex items-center gap-2 flex-wrap " +
+                        (isLeft ? "md:justify-end" : "")
+                      }
                     >
-                      {entry.company}
-                      <ExternalLink size={12} aria-hidden="true" />
-                    </a>
-                  ) : (
-                    <span className="text-text-primary">{entry.company}</span>
-                  )}
-                  <span className="text-text-tertiary">·</span>
-                  <span className="text-text-secondary inline-flex items-center gap-1">
-                    <MapPin size={12} aria-hidden="true" />
-                    {entry.location[locale]}
-                  </span>
-                </p>
-
-                <p className="mt-4 text-text-secondary text-sm leading-relaxed">
-                  {entry.summary[locale]}
-                </p>
-
-                <ul
-                  className={
-                    "mt-4 space-y-1.5 text-sm text-text-secondary " +
-                    (isLeft ? "md:text-right" : "")
-                  }
-                >
-                  {entry.highlights[locale].map((h, i) => (
-                    <li key={i} className="leading-relaxed">
-                      <span
+                      <Briefcase
+                        size={16}
                         aria-hidden="true"
-                        className={
-                          "inline-block text-accent " +
-                          (isLeft ? "md:hidden mr-2" : "mr-2")
-                        }
-                      >
-                        ▸
-                      </span>
-                      {h}
-                      <span
-                        aria-hidden="true"
-                        className={
-                          "inline-block text-accent ml-2 " +
-                          (isLeft ? "hidden md:inline" : "hidden")
-                        }
-                      >
-                        ◂
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <ul
-                  className={
-                    "mt-5 flex flex-wrap gap-1.5 " +
-                    (isLeft ? "md:justify-end" : "md:justify-start")
-                  }
-                >
-                  {entry.stack.map((tech) => (
-                    <li
-                      key={tech}
-                      className="font-mono text-[11px] px-2 py-1 rounded border border-border text-text-secondary bg-bg-primary/40"
+                        className="text-accent shrink-0"
+                      />
+                      {entry.url ? (
+                        <a
+                          href={entry.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-accent transition-colors inline-flex items-center gap-1"
+                        >
+                          {entry.company}
+                          <ExternalLink size={12} aria-hidden="true" />
+                        </a>
+                      ) : (
+                        <span>{entry.company}</span>
+                      )}
+                    </h3>
+                    <p
+                      className={
+                        "mt-1 text-sm flex items-center gap-2 flex-wrap " +
+                        (isLeft ? "md:justify-end" : "md:justify-start")
+                      }
                     >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
+                      <span className="text-text-secondary inline-flex items-center gap-1">
+                        <MapPin size={12} aria-hidden="true" />
+                        {entry.location[locale]}
+                      </span>
+                    </p>
+
+                    <p className="mt-4 text-text-secondary text-sm leading-relaxed">
+                      {entry.summary[locale]}
+                    </p>
+
+                    {/* Positions held at this company, most recent first. */}
+                    <ol className="mt-5 space-y-4">
+                      {entry.roles.map((role) => (
+                        <li
+                          key={role.title.en}
+                          className="border-t border-border pt-4"
+                        >
+                          <h4 className="font-semibold text-text-primary">
+                            {role.title[locale]}
+                          </h4>
+                          <p className="mt-1 font-mono text-xs text-text-tertiary">
+                            {role.period[locale]}
+                          </p>
+                          <p className="mt-3 text-text-secondary text-sm leading-relaxed">
+                            {role.description[locale]}
+                          </p>
+                          <ul
+                            className={
+                              "mt-4 flex flex-wrap gap-1.5 " +
+                              (isLeft ? "md:justify-end" : "md:justify-start")
+                            }
+                          >
+                            {role.stack.map((tech) => (
+                              <li
+                                key={tech}
+                                className="font-mono text-[11px] px-2 py-1 rounded border border-border text-text-secondary bg-bg-primary/40"
+                              >
+                                {tech}
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ol>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-xl font-semibold flex items-center gap-2 flex-wrap">
+                      <Briefcase
+                        size={16}
+                        aria-hidden="true"
+                        className="text-accent shrink-0"
+                      />
+                      <span>{entry.role[locale]}</span>
+                    </h3>
+                    <p
+                      className={
+                        "mt-1 text-sm flex items-center gap-2 flex-wrap " +
+                        (isLeft ? "md:justify-end" : "md:justify-start")
+                      }
+                    >
+                      {entry.url ? (
+                        <a
+                          href={entry.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-text-primary hover:text-accent transition-colors inline-flex items-center gap-1"
+                        >
+                          {entry.company}
+                          <ExternalLink size={12} aria-hidden="true" />
+                        </a>
+                      ) : (
+                        <span className="text-text-primary">{entry.company}</span>
+                      )}
+                      <span className="text-text-tertiary">·</span>
+                      <span className="text-text-secondary inline-flex items-center gap-1">
+                        <MapPin size={12} aria-hidden="true" />
+                        {entry.location[locale]}
+                      </span>
+                    </p>
+
+                    <p className="mt-4 text-text-secondary text-sm leading-relaxed">
+                      {entry.summary[locale]}
+                    </p>
+
+                    <ul
+                      className={
+                        "mt-4 space-y-1.5 text-sm text-text-secondary " +
+                        (isLeft ? "md:text-right" : "")
+                      }
+                    >
+                      {entry.highlights[locale].map((h, i) => (
+                        <li key={i} className="leading-relaxed">
+                          <span
+                            aria-hidden="true"
+                            className={
+                              "inline-block text-accent " +
+                              (isLeft ? "md:hidden mr-2" : "mr-2")
+                            }
+                          >
+                            ▸
+                          </span>
+                          {h}
+                          <span
+                            aria-hidden="true"
+                            className={
+                              "inline-block text-accent ml-2 " +
+                              (isLeft ? "hidden md:inline" : "hidden")
+                            }
+                          >
+                            ◂
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <ul
+                      className={
+                        "mt-5 flex flex-wrap gap-1.5 " +
+                        (isLeft ? "md:justify-end" : "md:justify-start")
+                      }
+                    >
+                      {entry.stack.map((tech) => (
+                        <li
+                          key={tech}
+                          className="font-mono text-[11px] px-2 py-1 rounded border border-border text-text-secondary bg-bg-primary/40"
+                        >
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
             </div>
           </motion.li>

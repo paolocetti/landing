@@ -1,6 +1,6 @@
 # paolocetti.com
 
-Personal portfolio of **Paolo Cetti** — Backend & Cloud Engineer.
+Personal portfolio of **Paolo Cetti** — Head of Engineering at Leanmote.
 
 Built with [Astro](https://astro.build) + React Islands + Tailwind CSS v4.
 Hosted on GitHub Pages with a custom domain (`paolocetti.com`).

@@ -44,7 +44,7 @@ const svg = `
           font-size="32"
           font-weight="500"
           fill="#3b82f6"
-          dominant-baseline="hanging">// backend &amp; cloud engineer</text>
+          dominant-baseline="hanging">// head of engineering @ leanmote</text>
   </g>
 
   <g transform="translate(80, 215)">
@@ -63,13 +63,13 @@ const svg = `
           font-size="36"
           font-weight="400"
           fill="#a3a3a3"
-          dominant-baseline="hanging">Building scalable backends and serverless</text>
+          dominant-baseline="hanging">Leading Leanmote's engineering team.</text>
     <text x="0" y="50"
           font-family="${SANS}"
           font-size="36"
           font-weight="400"
           fill="#a3a3a3"
-          dominant-baseline="hanging">architectures on AWS.</text>
+          dominant-baseline="hanging">Backend, cloud (AWS) and technical direction.</text>
   </g>
 
   <line x1="80" y1="540" x2="1120" y2="540" stroke="#262626" stroke-width="1"/>

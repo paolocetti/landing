@@ -15,18 +15,40 @@ export interface Stat {
   value: string;
 }
 
-export interface ExperienceEntry {
+interface ExperienceBase {
   slug: string;
   company: string;
   url?: string;
-  role: Bilingual<string>;
   location: Bilingual<string>;
+  /** Company-level period — spans every role held there. */
   period: Bilingual<string>;
   current: boolean;
   summary: Bilingual<string>;
-  highlights: Bilingual<string[]>;
+}
+
+/** One position held inside a company that had several of them. */
+export interface ExperienceRole {
+  title: Bilingual<string>;
+  period: Bilingual<string>;
+  description: Bilingual<string>;
   stack: string[];
 }
+
+/** One company, one position: headline role plus bullet highlights. */
+export interface SingleRoleExperience extends ExperienceBase {
+  role: Bilingual<string>;
+  highlights: Bilingual<string[]>;
+  stack: string[];
+  roles?: never;
+}
+
+/** One company, several positions: each rendered as a block inside the card. */
+export interface MultiRoleExperience extends ExperienceBase {
+  /** Most recent first. */
+  roles: ExperienceRole[];
+}
+
+export type ExperienceEntry = SingleRoleExperience | MultiRoleExperience;
 
 export type ProjectType =
   | "professional"
@@ -75,11 +97,11 @@ export const hero: {
   ctaPrimary: Bilingual<string>;
   ctaSecondary: Bilingual<string>;
 } = {
-  preTitle: "// backend & cloud engineer",
+  preTitle: "// head of engineering @ leanmote",
   name: "Paolo Cetti",
   tagline: {
-    en: "Building scalable backends and serverless architectures on AWS.",
-    es: "Construyo backends escalables y arquitecturas serverless en AWS.",
+    en: "Leading Leanmote's engineering team. Backend, cloud (AWS) and technical direction.",
+    es: "Liderando el equipo de ingeniería de Leanmote. Backend, cloud (AWS) y dirección técnica.",
   },
   ctaPrimary: { en: "Get in touch", es: "Hablemos" },
   ctaSecondary: { en: "View projects", es: "Ver proyectos" },
@@ -93,13 +115,13 @@ export const about: {
 } = {
   paragraphs: {
     en: [
-      "Systems Engineer (UCC) focused on backend and cloud. I currently build and scale Leanmote's platform, designing serverless infrastructure on AWS and working closely with the CTO on technical decisions.",
+      "Systems Engineer (UCC) leading the technical team at Leanmote as Head of Engineering. I define the product's technical direction and scale the platform on AWS, balancing hands-on execution with team leadership. I joined Leanmote as a Full Stack Developer in November 2025 and took the Head of Engineering role in June 2026, during an internal transition of the technical team.",
       "Before Leanmote, I built AI solutions at Pi Data (a WhatsApp bot for events with 300+ attendees, an LLM-powered email triage system used by government agencies), shipped scrapers across 10+ countries at Qanlex, and got my first formal dev job at Omixom while still in technical high school — migrating an agro-climate IoT platform to microservices.",
       "I particularly enjoy when an architectural change becomes measurable — like migrating a critical PHP query that took 40 seconds to a Python Lambda that resolves it in 5–10s. I also integrate AI tools (Claude Code with subagents, git worktrees, custom skills) into my workflow as part of the craft, not as an extra.",
       "Currently preparing for the AWS Solutions Architect Associate certification.",
     ],
     es: [
-      "Ingeniero en Sistemas (UCC) enfocado en backend y cloud. Hoy construyo y escalo la plataforma de Leanmote, diseñando infraestructura serverless en AWS y trabajando codo a codo con el CTO en las decisiones técnicas.",
+      "Ingeniero en Sistemas (UCC) liderando el equipo técnico de Leanmote como Head of Engineering. Defino la dirección técnica del producto y escalo la plataforma sobre AWS, balanceando ejecución hands-on con liderazgo del equipo. Me sumé a Leanmote como Full Stack Developer en noviembre de 2025 y asumí el rol de Head of Engineering en junio de 2026, al frente de una transición interna en el equipo técnico.",
       "Antes de Leanmote pasé por Pi Data (bot de WhatsApp para eventos de 300+ personas, sistema de triage de emails con LLMs para áreas de gobierno), Qanlex (scrapers en AWS para datos judiciales de 10+ países de LATAM) y Omixom — mi primer trabajo formal, todavía en la secundaria técnica — migrando una plataforma IoT agroclimática a microservicios.",
       "Disfruto especialmente cuando un cambio de arquitectura se traduce en algo medible — por ejemplo, migré una consulta crítica de PHP que tardaba 40 segundos a un Lambda en Python que la resuelve en 5–10s. Integro herramientas de IA en mi flujo de desarrollo (Claude Code con subagentes, git worktrees, skills personalizadas) como parte del oficio actual, no como un extra.",
       "Actualmente preparándome para la certificación AWS Solutions Architect Associate.",
@@ -123,27 +145,33 @@ export const experience: ExperienceEntry[] = [
     slug: "leanmote",
     company: "Leanmote",
     url: "https://leanmote.com",
-    role: { en: "Full Stack Developer", es: "Full Stack Developer" },
     location: { en: "Remote", es: "Remoto" },
     period: { en: "Nov 2025 — Present", es: "Nov 2025 — Actualidad" },
     current: true,
     summary: {
-      en: "SaaS platform for engineering teams. Working directly with the CTO on the development and scaling of the platform.",
-      es: "Plataforma SaaS para equipos de ingeniería. Trabajo directamente con el CTO en el desarrollo y escalado de la plataforma.",
+      en: "SaaS platform for engineering teams.",
+      es: "Plataforma SaaS para equipos de ingeniería.",
     },
-    highlights: {
-      en: [
-        "Designed and maintain serverless infrastructure on AWS: Lambda, API Gateway, RDS MySQL, Cognito and S3.",
-        "Migrated critical PHP aggregated-data queries (~40s) to Python Lambdas, reducing response time to 5–10 seconds.",
-        "Modernized the authentication system by implementing AWS Cognito.",
-      ],
-      es: [
-        "Diseño y mantengo infraestructura serverless en AWS: Lambda, API Gateway, RDS MySQL, Cognito y S3.",
-        "Migré consultas críticas de data agregada de PHP (~40s) a Lambdas en Python, bajando el tiempo de respuesta a 5–10s.",
-        "Modernicé el sistema de autenticación implementando AWS Cognito.",
-      ],
-    },
-    stack: ["Python", "AWS Lambda", "API Gateway", "RDS MySQL", "Cognito", "S3"],
+    roles: [
+      {
+        title: { en: "Head of Engineering", es: "Head of Engineering" },
+        period: { en: "Jun 2026 — Present", es: "Jun 2026 — Actualidad" },
+        description: {
+          en: "Leading the technical direction of Leanmote's product and team: architecture and roadmap in coordination with founders and CEO, evolution of the AWS serverless infrastructure, team leadership (hiring, mentorship, code reviews) and balancing hands-on execution with longer-term platform decisions. Introduced AI-powered workflows (Claude Code, agents, custom skills) to accelerate delivery while maintaining code quality.",
+          es: "Liderando la dirección técnica del producto y del equipo de Leanmote: arquitectura y roadmap en coordinación con founders y CEO, evolución de la infraestructura serverless en AWS, liderazgo del equipo (hiring, mentoría, code reviews) y balance entre ejecución hands-on y decisiones de plataforma a más largo plazo. Introduje flujos de trabajo con IA (Claude Code, agentes, skills) para acelerar entregas manteniendo calidad.",
+        },
+        stack: ["Leadership", "Python", "AWS", "Serverless", "Team Management"],
+      },
+      {
+        title: { en: "Full Stack Developer", es: "Full Stack Developer" },
+        period: { en: "Nov 2025 — May 2026", es: "Nov 2025 — May 2026" },
+        description: {
+          en: "Designed and maintained serverless infrastructure on AWS (Lambda, API Gateway, RDS MySQL, Cognito, S3) and developed REST APIs in Python. Optimized critical aggregated-data queries by migrating PHP processes (~40s) to Python Lambdas (5–10s). Modernized authentication with AWS Cognito. Also collaborated on the frontend when needed.",
+          es: "Diseñé y mantuve infraestructura serverless en AWS (Lambda, API Gateway, RDS MySQL, Cognito, S3) y desarrollé APIs REST en Python. Optimicé consultas críticas de data agregada migrando procesos de PHP (~40s) a Lambdas en Python (5–10s). Modernicé la autenticación con AWS Cognito. También colaboré en frontend cuando el sistema lo requería.",
+        },
+        stack: ["Python", "AWS", "Serverless", "REST APIs", "Full Stack"],
+      },
+    ],
   },
   {
     slug: "pi-data",

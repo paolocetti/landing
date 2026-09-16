@@ -1,8 +1,8 @@
 {
   "site": {
-    "title": "Paolo Cetti — Backend & Cloud Engineer",
-    "description": "Backend & Cloud Engineer. Construyo backends escalables y arquitecturas serverless en AWS. Córdoba, Argentina.",
-    "ogAlt": "Paolo Cetti — Backend & Cloud Engineer"
+    "title": "Paolo Cetti — Head of Engineering",
+    "description": "Head of Engineering en Leanmote. Backend, cloud (AWS) y liderazgo técnico. Córdoba, Argentina.",
+    "ogAlt": "Paolo Cetti — Head of Engineering"
   },
   "nav": {
     "about": "Sobre mí",
@@ -18,8 +18,8 @@
     "switchToEnglish": "Switch to English"
   },
   "hero": {
-    "preTitle": "// backend & cloud engineer",
-    "tagline": "Construyo backends escalables y arquitecturas serverless en AWS.",
+    "preTitle": "// head of engineering @ leanmote",
+    "tagline": "Liderando el equipo de ingeniería de Leanmote. Backend, cloud (AWS) y dirección técnica.",
     "ctaPrimary": "Hablemos",
     "ctaSecondary": "Ver proyectos",
     "scrollHint": "Scroll"
