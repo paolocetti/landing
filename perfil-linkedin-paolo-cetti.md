@@ -178,7 +178,7 @@ Stack: Python · Django · Flask · Docker · Git · Scrum
 Carrera de grado de 5 años (Ingeniería en Sistemas) con orientación en desarrollo de software, sistemas distribuidos, bases de datos, redes y gestión de proyectos. La completé en 4 años gracias a un convenio de equivalencias con la escuela técnica donde cursé el secundario.
 
 Aspectos destacados:
-• Promedio: 8.97 / 10.
+• Promedio: 9.09 / 10.
 • Carrera completada al día y un año antes del plan oficial.
 • Proyecto final: SaveApp, una aplicación móvil para la gestión de beneficios bancarios en Argentina (ver sección Proyectos).
 • Formación complementaria al trabajo profesional, lo que me permitió aplicar la mayoría de los contenidos en proyectos reales en paralelo.
@@ -371,7 +371,7 @@ Stack: Python · Django · Flask · Docker · Git · Scrum
 5-year Systems Engineering degree with a focus on software development, distributed systems, databases, networks and project management. I completed it in 4 years thanks to a credit-equivalency agreement with the technical high school I attended.
 
 Highlights:
-• GPA: 8.97 / 10.
+• GPA: 9.09 / 10.
 • Degree completed on schedule and one year ahead of the official 5-year plan.
 • Final project: SaveApp, a mobile application for the management of bank-card benefits in Argentina (see Projects section).
 • Studied in parallel with professional work, which allowed me to apply most of the academic content in real-world projects.
@@ -436,7 +436,6 @@ Repository: github.com/cettipao/Qanlex-Scrapper
 # 📋 Pendientes / Recordatorios
 
 - [ ] Cargar en LinkedIn el puesto de **Head of Engineering** (jun 2026 - actualidad) y cerrar **Full Stack Developer** en mayo 2026, ambos bajo la misma empresa. Actualizar también titular y About en los dos idiomas.
-- [ ] Unificar el **promedio**: este doc dice 8.97 (§7) y el portfolio dice 9.09. Verificar cuál es el correcto y alinear ambos.
 - [ ] Verificar fecha real de fin en **Pi Data**.
 - [ ] Verificar fechas reales del proyecto **Web Scraper** (probablemente enero-marzo 2025, no nov-dic 2024).
 - [ ] Subir nivel de inglés en sección Idiomas a **"Competencia profesional completa"** / **"Full Professional"**.

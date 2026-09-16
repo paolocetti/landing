@@ -193,7 +193,7 @@ Categorías:
 
 ### 5.7 — Education & Certifications
 
-- Universidad Católica de Córdoba — Systems Engineering (2022-2025) — GPA 8.97
+- Universidad Católica de Córdoba — Systems Engineering (2022-2025) — Academic average 9.09
 - AWS Certified Cloud Practitioner
 - First Certificate in English (Cambridge B2)
 
