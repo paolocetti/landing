@@ -11,7 +11,7 @@ Documento de referencia con todos los textos del perfil, en **español** e **ing
 ## 1. Titular (Headline)
 
 ```
-Backend & Cloud Engineer | Python · AWS · Serverless | Systems Engineer @ UCC
+Head of Engineering @ Leanmote | Python · AWS · Serverless | Systems Engineer @ UCC
 ```
 
 ---
@@ -19,10 +19,14 @@ Backend & Cloud Engineer | Python · AWS · Serverless | Systems Engineer @ UCC
 ## 2. Acerca de (About)
 
 ```
-Ingeniero en Sistemas (UCC) enfocado en backend y cloud. Hoy construyo y escalo la plataforma de Leanmote, diseñando infraestructura serverless en AWS y trabajando codo a codo con el CTO en las decisiones técnicas.
+Ingeniero en Sistemas (UCC) liderando el equipo técnico de Leanmote como Head of Engineering. Defino la dirección técnica del producto y escalo la plataforma sobre AWS, balanceando ejecución hands-on con liderazgo del equipo.
+
+Me sumé a Leanmote como Full Stack Developer en noviembre de 2025 y asumí el rol de Head of Engineering en junio de 2026, al frente de una transición interna en el equipo técnico.
 
 Mi día a día mezcla varias capas:
 
+• Dirección técnica del producto: arquitectura y roadmap en coordinación con founders y CEO.
+• Liderazgo del equipo de ingeniería: hiring, mentoría y code reviews.
 • Diseño de APIs y funciones serverless en Python sobre AWS Lambda y API Gateway.
 • Modelado y optimización de bases de datos en RDS MySQL.
 • Modernización de la infraestructura (auth con Cognito, almacenamiento en S3, mejoras continuas siguiendo buenas prácticas de AWS).
@@ -36,7 +40,7 @@ Antes de Leanmote pasé por:
 
 Esa combinación me dio una visión bastante integral: backend, cloud, datos e IA. Disfruto especialmente cuando un cambio de arquitectura se traduce en algo medible — por ejemplo, migré una consulta crítica de PHP que tardaba 40 segundos a un Lambda que la resuelve en 5–10s.
 
-Trabajo integrando herramientas de IA en mi flujo de desarrollo (Claude Code con subagentes, git worktrees, skills personalizadas) para acelerar entregas sin sacrificar calidad de código. Lo veo como parte del oficio actual, no como un extra.
+Introduje herramientas de IA en el flujo de desarrollo del equipo (Claude Code con subagentes, git worktrees, skills personalizadas) para acelerar entregas sin sacrificar calidad de código. Lo veo como parte del oficio actual, no como un extra.
 
 Actualmente preparándome para la certificación AWS Solutions Architect Associate.
 
@@ -47,23 +51,48 @@ Actualmente preparándome para la certificación AWS Solutions Architect Associa
 
 ## 3. Experiencia — Leanmote
 
-**Puesto:** Full Stack Developer
+ℹ️ **Son dos puestos dentro de la misma empresa.** En LinkedIn se cargan por separado (Añadir puesto → misma empresa "Leanmote"), y quedan agrupados bajo una sola entrada con el período total. Head of Engineering va arriba como puesto actual.
+
+### 3.1 — Head of Engineering (puesto actual)
+
+**Puesto:** Head of Engineering
 **Empresa:** Leanmote
 **Tipo:** Jornada completa
-**Fecha:** noviembre 2025 - Actualidad
+**Fecha:** junio 2026 - Actualidad
 **Ubicación:** En remoto
 
 ```
 Leanmote es una plataforma SaaS para equipos de ingeniería.
 
-Trabajo directamente con el CTO en el desarrollo y escalado de la plataforma:
+Lidero la dirección técnica del producto y del equipo:
 
-• Diseño y mantengo infraestructura serverless en AWS: Lambda, API Gateway, RDS MySQL, Cognito y S3.
-• Desarrollo APIs REST y funciones serverless en Python para la lógica de negocio y el procesamiento de datos.
+• Defino arquitectura y roadmap técnico en coordinación con founders y CEO.
+• Lidero el equipo de ingeniería: hiring, mentoría, code reviews y seguimiento de entregas.
+• Conduzco la evolución de la infraestructura serverless en AWS (Lambda, API Gateway, RDS MySQL, Cognito, S3).
+• Balanceo ejecución hands-on con decisiones de plataforma a más largo plazo.
+• Introduje flujos de trabajo con IA (Claude Code, agentes, skills personalizadas) para acelerar entregas manteniendo la calidad del código.
+• Asumí el rol al frente de una transición interna del equipo técnico, sosteniendo la continuidad del producto.
+
+Stack: Python · AWS · Serverless · Leadership · Team Management
+```
+
+### 3.2 — Full Stack Developer (puesto anterior)
+
+**Puesto:** Full Stack Developer
+**Empresa:** Leanmote
+**Tipo:** Jornada completa
+**Fecha:** noviembre 2025 - mayo 2026
+**Ubicación:** En remoto
+
+```
+Primer rol en Leanmote, enfocado en backend y cloud:
+
+• Diseñé y mantuve infraestructura serverless en AWS: Lambda, API Gateway, RDS MySQL, Cognito y S3.
+• Desarrollé APIs REST y funciones serverless en Python para la lógica de negocio y el procesamiento de datos.
 • Optimicé consultas críticas de data agregada migrando procesos de PHP (que tardaban ~40s) a Lambdas en Python, reduciendo el tiempo de respuesta a 5–10 segundos.
 • Modernicé el sistema de autenticación implementando AWS Cognito.
 • Mejoras continuas de infraestructura siguiendo buenas prácticas de AWS y manteniendo una base de conocimiento técnica del stack.
-• También colaboro en frontend cuando el sistema lo requiere, entendiendo el flujo de punta a punta.
+• También colaboré en frontend cuando el sistema lo requirió, entendiendo el flujo de punta a punta.
 
 Stack: Python · AWS Lambda · API Gateway · RDS MySQL · Cognito · S3
 ```
@@ -174,7 +203,7 @@ Lo mismo aplica a Aptitudes, Certificaciones e Idiomas: no se traducen, pero ya 
 ## 1. Headline
 
 ```
-Backend & Cloud Engineer | Python · AWS · Serverless | Systems Engineer @ UCC
+Head of Engineering @ Leanmote | Python · AWS · Serverless | Systems Engineer @ UCC
 ```
 
 ---
@@ -182,10 +211,14 @@ Backend & Cloud Engineer | Python · AWS · Serverless | Systems Engineer @ UCC
 ## 2. About
 
 ```
-Systems Engineer (UCC) focused on backend and cloud. I currently build and scale Leanmote's platform, designing serverless infrastructure on AWS and working closely with the CTO on technical decisions.
+Systems Engineer (UCC) leading the technical team at Leanmote as Head of Engineering. I define the product's technical direction and scale the platform on AWS, balancing hands-on execution with team leadership.
+
+I joined Leanmote as a Full Stack Developer in November 2025 and took the Head of Engineering role in June 2026, during an internal transition of the technical team.
 
 My day-to-day spans several layers:
 
+• Technical direction of the product: architecture and roadmap in coordination with founders and CEO.
+• Engineering team leadership: hiring, mentorship and code reviews.
 • Designing REST APIs and serverless functions in Python on AWS Lambda and API Gateway.
 • Modeling and optimizing relational databases on RDS MySQL.
 • Modernizing infrastructure (auth with Cognito, storage on S3, continuous improvements following AWS best practices).
@@ -199,7 +232,7 @@ Before Leanmote, I worked at:
 
 That mix gave me a fairly integral view: backend, cloud, data and AI. I particularly enjoy when an architectural change translates into something measurable — for example, I migrated a critical PHP query that took ~40 seconds into a Lambda function that resolves it in 5–10s.
 
-I integrate AI tools into my development workflow (Claude Code with subagents, git worktrees, custom skills) to speed up delivery without compromising code quality. I see it as part of the craft today, not as an extra.
+I introduced AI tools into the team's development workflow (Claude Code with subagents, git worktrees, custom skills) to speed up delivery without compromising code quality. I see it as part of the craft today, not as an extra.
 
 Currently preparing for the AWS Solutions Architect Associate certification.
 
@@ -210,23 +243,48 @@ Currently preparing for the AWS Solutions Architect Associate certification.
 
 ## 3. Experience — Leanmote
 
-**Title:** Full Stack Developer
+ℹ️ **Two positions at the same company.** Add them separately in LinkedIn (Add position → same company "Leanmote"); they get grouped under a single entry with the combined date range. Head of Engineering goes on top as the current role.
+
+### 3.1 — Head of Engineering (current role)
+
+**Title:** Head of Engineering
 **Company:** Leanmote
 **Employment type:** Full-time
-**Dates:** November 2025 - Present
+**Dates:** June 2026 - Present
 **Location:** Remote
 
 ```
 Leanmote is a SaaS platform for engineering teams.
 
-I work directly with the CTO on the development and scaling of the platform:
+I lead the technical direction of the product and the team:
 
-• Design and maintain serverless infrastructure on AWS: Lambda, API Gateway, RDS MySQL, Cognito and S3.
-• Develop REST APIs and serverless functions in Python for business logic and data processing.
+• Define architecture and technical roadmap in coordination with founders and CEO.
+• Lead the engineering team: hiring, mentorship, code reviews and delivery tracking.
+• Drive the evolution of the serverless infrastructure on AWS (Lambda, API Gateway, RDS MySQL, Cognito, S3).
+• Balance hands-on execution with longer-term platform decisions.
+• Introduced AI-powered workflows (Claude Code, agents, custom skills) to accelerate delivery while maintaining code quality.
+• Took the role during an internal transition of the technical team, sustaining product continuity.
+
+Stack: Python · AWS · Serverless · Leadership · Team Management
+```
+
+### 3.2 — Full Stack Developer (previous role)
+
+**Title:** Full Stack Developer
+**Company:** Leanmote
+**Employment type:** Full-time
+**Dates:** November 2025 - May 2026
+**Location:** Remote
+
+```
+First role at Leanmote, focused on backend and cloud:
+
+• Designed and maintained serverless infrastructure on AWS: Lambda, API Gateway, RDS MySQL, Cognito and S3.
+• Developed REST APIs and serverless functions in Python for business logic and data processing.
 • Optimized critical aggregated-data queries by migrating PHP processes (which took ~40s) to Python Lambdas, reducing response time to 5–10 seconds.
 • Modernized the authentication system by implementing AWS Cognito.
 • Continuous infrastructure improvements following AWS best practices, while maintaining a technical knowledge base of the stack.
-• Also collaborate on the frontend when the system requires it, understanding the end-to-end flow.
+• Also collaborated on the frontend when the system required it, understanding the end-to-end flow.
 
 Stack: Python · AWS Lambda · API Gateway · RDS MySQL · Cognito · S3
 ```
@@ -377,6 +435,8 @@ Repository: github.com/cettipao/Qanlex-Scrapper
 
 # 📋 Pendientes / Recordatorios
 
+- [ ] Cargar en LinkedIn el puesto de **Head of Engineering** (jun 2026 - actualidad) y cerrar **Full Stack Developer** en mayo 2026, ambos bajo la misma empresa. Actualizar también titular y About en los dos idiomas.
+- [ ] Unificar el **promedio**: este doc dice 8.97 (§7) y el portfolio dice 9.09. Verificar cuál es el correcto y alinear ambos.
 - [ ] Verificar fecha real de fin en **Pi Data**.
 - [ ] Verificar fechas reales del proyecto **Web Scraper** (probablemente enero-marzo 2025, no nov-dic 2024).
 - [ ] Subir nivel de inglés en sección Idiomas a **"Competencia profesional completa"** / **"Full Professional"**.
