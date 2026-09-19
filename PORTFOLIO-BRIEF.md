@@ -211,7 +211,7 @@ Layout simple, dos columnas.
 
 Opciones:
 - Email → mailto + copiar al clipboard con feedback.
-- LinkedIn → linkedin.com/in/cettipao
+- LinkedIn → linkedin.com/in/paolocetti
 - GitHub → github.com/paolocetti
 - Twitter / X → (pendiente, dejar variable de entorno)
 - Calendly → (pendiente, dejar variable de entorno)
@@ -393,7 +393,7 @@ Workflow que:
 - **Título profesional (EN):** Head of Engineering @ Leanmote
 - **Título profesional (ES):** Head of Engineering @ Leanmote *(se deja en inglés en ambos idiomas)*
 - **Email:** cettipao@gmail.com
-- **LinkedIn:** linkedin.com/in/cettipao
+- **LinkedIn:** linkedin.com/in/paolocetti
 - **GitHub:** github.com/paolocetti
 - **Ubicación:** Córdoba, Argentina
 
