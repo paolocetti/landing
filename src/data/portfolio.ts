@@ -325,7 +325,7 @@ export const projects: ProjectEntry[] = [
     links: [
       {
         label: { en: "Repository", es: "Repositorio" },
-        url: "https://github.com/cettipao/Qanlex-Scrapper",
+        url: "https://github.com/paolocetti/Qanlex-Scrapper",
       },
     ],
     stack: ["Python", "AWS Lambda", "EventBridge", "EC2", "MySQL"],

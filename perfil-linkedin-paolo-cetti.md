@@ -426,7 +426,7 @@ Architecture:
 I configured continuous integration with GitHub and deployment automation, optimizing the periodic extraction and update of information.
 
 Skills: Python · AWS · Web Scraping · MySQL
-Repository: github.com/cettipao/Qanlex-Scrapper
+Repository: github.com/paolocetti/Qanlex-Scrapper
 ```
 
 ---

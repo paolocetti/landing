@@ -10,7 +10,7 @@
  * keeps going, even offline or without a token (useful for `astro dev`).
  */
 
-const GITHUB_USER = "cettipao";
+const GITHUB_USER = "paolocetti";
 const GRAPHQL_ENDPOINT = "https://api.github.com/graphql";
 
 export interface GitHubRepo {

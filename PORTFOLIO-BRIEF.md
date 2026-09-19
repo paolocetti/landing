@@ -168,7 +168,7 @@ Proyectos a mostrar:
 
 **Integración GitHub:**
 - Script en `astro.config.mjs` o utility `src/lib/github.ts` que fetcha la API de GitHub durante build.
-- Endpoint: `https://api.github.com/users/cettipao/repos?sort=updated&per_page=6`
+- Endpoint: `https://api.github.com/users/paolocetti/repos?sort=updated&per_page=6`
 - Filtrar solo los marcados como "pinned" (requiere GraphQL API) o los más actualizados como fallback.
 - Tener en cuenta: GraphQL API requiere token. Para el build en GitHub Actions, usar `GITHUB_TOKEN` (built-in en Actions, no requiere setup).
 
@@ -212,7 +212,7 @@ Layout simple, dos columnas.
 Opciones:
 - Email → mailto + copiar al clipboard con feedback.
 - LinkedIn → linkedin.com/in/cettipao
-- GitHub → github.com/cettipao
+- GitHub → github.com/paolocetti
 - Twitter / X → (pendiente, dejar variable de entorno)
 - Calendly → (pendiente, dejar variable de entorno)
 - CV en PDF → botón "Download CV" que descarga `/cv-paolo-cetti.pdf` (archivo a subir luego).
@@ -222,7 +222,7 @@ Opciones:
 ### 5.10 — Footer
 
 - Línea sutil con: `© 2026 Paolo Cetti · Built with Astro · Deployed on GitHub Pages`
-- Comentario HTML escondido para devs curiosos: `<!-- hey curious dev! 👋 source code at github.com/cettipao/portfolio -->`
+- Comentario HTML escondido para devs curiosos: `<!-- hey curious dev! 👋 source code at github.com/paolocetti/landing -->`
 - Easter egg en consola: `console.log("%cPaolo Cetti", "color: #3b82f6; font-size: 24px; font-weight: bold;")` + mensaje de bienvenida tipo "looking around? let's chat: cettipao@gmail.com"
 
 ---
@@ -394,7 +394,7 @@ Workflow que:
 - **Título profesional (ES):** Head of Engineering @ Leanmote *(se deja en inglés en ambos idiomas)*
 - **Email:** cettipao@gmail.com
 - **LinkedIn:** linkedin.com/in/cettipao
-- **GitHub:** github.com/cettipao
+- **GitHub:** github.com/paolocetti
 - **Ubicación:** Córdoba, Argentina
 
 ### Tagline (hero)
@@ -423,7 +423,7 @@ Workflow que:
 ## 13. Roadmap / Pendientes
 
 **Fase 1 — Setup inicial:**
-- [ ] Crear repo `cettipao/portfolio` en GitHub.
+- [ ] Crear repo `paolocetti/landing` en GitHub.
 - [ ] Inicializar Astro con TypeScript + Tailwind + React.
 - [ ] Configurar tipografías Geist + JetBrains Mono.
 - [ ] Configurar i18n (ES/EN).

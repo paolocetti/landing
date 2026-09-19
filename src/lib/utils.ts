@@ -22,6 +22,6 @@ export const SITE_URL = "https://paolocetti.com";
 export const SOCIAL = {
   email: "cettipao@gmail.com",
   linkedin: "https://www.linkedin.com/in/cettipao",
-  github: "https://github.com/cettipao",
+  github: "https://github.com/paolocetti",
   calendly: "https://calendly.com/paolocetti/30min",
 } as const;
